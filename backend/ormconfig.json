@@ -4,7 +4,7 @@
     "port": 1433,
     "username": "dba_erp_admin",
     "password": "ErpChaveiros#2024!Secure",
-    "database": "erp_chaveiros",
+    "database": "ERP_Chaveiros",
     "synchronize": true,
     "logging": true,
     "options": {
