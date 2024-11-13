@@ -1,0 +1,11 @@
+{
+    "type": "mssql",
+    "host": "localhost",
+    "port": 1433,
+    "username": "dba_erp_admin",
+    "password": "ErpChaveiros#2024!Secure",
+    "database": "erp_chaveiros",
+    "synchronize": true,
+    "logging": false
+  }
+  
