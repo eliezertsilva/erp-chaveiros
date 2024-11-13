@@ -6,6 +6,9 @@
     "password": "ErpChaveiros#2024!Secure",
     "database": "erp_chaveiros",
     "synchronize": true,
-    "logging": false
-  }
-  
+    "logging": true,
+    "options": {
+        "enableArithAbort": true,
+        "trustServerCertificate": true
+    }
+}
