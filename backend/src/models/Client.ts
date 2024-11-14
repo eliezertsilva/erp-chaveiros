@@ -1,4 +1,4 @@
-const { Entity, PrimaryGeneratedColumn, Column } = require("typeorm");
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity("clients")
 export class Client {
@@ -21,4 +21,5 @@ export class Client {
     address: any;
 }
 
-module.exports = Client;
+export default Client;
+

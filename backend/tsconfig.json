@@ -1,13 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "ESNext",
-        "module": "CommonJS",
-        "experimentalDecorators": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "outDir": "./dist"
-    },
-    "include": ["src/**/*"]
+"compilerOptions": {
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+},
+"include": ["src/**/*"]
 }
