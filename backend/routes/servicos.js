@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const novoServico = await Servico.create(req.body);
-    res.status(201).json(novoServico);
+    return res.status(201).json(novoServico);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -24,16 +24,17 @@ router.post('/', async (req, res) => {
 
 // Rota GET para obter um serviço específico
 router.get('/:id', async (req, res) => {
-  try {
-    const servico = await Servico.findByPk(req.params.id);
-    if (!servico) {
-      return res.status(404).json({ error: 'Serviço não encontrado' });
+    try {
+      const servico = await Servico.findByPk(req.params.id);
+      if (!servico) {
+        return res.status(404).json({ error: 'Serviço não encontrado' });
+      }
+      res.json(servico);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
     }
-    res.json(servico);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+  });
+  
 
 // Rota PUT para atualizar um serviço
 router.put('/:id', async (req, res) => {
