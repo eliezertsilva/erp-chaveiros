@@ -19,14 +19,6 @@ status: {
     isIn: [['em andamento', 'concluído', 'cancelado']],
     },
 },
-dataInicio: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-},
-dataConclusao: {
-    type: DataTypes.DATE,
-    allowNull: true,
-},
 preco: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
