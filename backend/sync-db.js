@@ -1,7 +1,6 @@
 // backend/sync-db.js
-const sequelize = require('./config/db');
-const Cliente = require('./models/cliente');
-const Servico = require('./models/servico'); // Adicione os modelos necessários
+const sequelize = require('./config/db'); // Adicione os modelos necessários
+const contasReceber = require('./models/contasReceber');
 
 (async () => {
   try {

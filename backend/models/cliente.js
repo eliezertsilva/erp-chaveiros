@@ -27,6 +27,22 @@ const Cliente = sequelize.define('Cliente', {
   timestamps: true,
 });
 
+// Função para associar
+Cliente.associate = (models) => {
+  Cliente.hasMany(models.ContaReceber, {
+    foreignKey: 'clienteId',
+    as: 'contasRecebers', // Relacionamento inverso com ContaReceber
+  });
+};
+
+// Função para associar
+Cliente.associate = (models) => {
+  Cliente.hasMany(models.ContaPagar, {
+    foreignKey: 'clienteId',
+    as: 'contasPagars', // Relacionamento inverso com ContaReceber
+  });
+};
+
 module.exports = { Cliente };
 
 
